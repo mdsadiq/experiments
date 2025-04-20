@@ -1,0 +1,19 @@
+<div>Deplyment logs</div>
+<div>
+  <h3>streaming logs real time</h3>
+  <button id="#button0" onclick="startdeployment()">New deployment</button>
+  <ul></ul>
+</div>
+<script type="text/javascript">
+  function startdeployment() {
+    console.log("start");
+    const evtSource = new EventSource("/deployment/new");
+    evtSource.onmessage = (event) => {
+      const liElement = document.createElement("li");
+      const eventList = document.querySelector("ul");
+      liElement.textContent = `${event.data}`;
+      //   eventList.appendChild(liElement)
+      eventList.prepend(liElement);
+    };
+  }
+</script>

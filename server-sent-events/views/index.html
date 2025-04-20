@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+
+    <h1>Deployments page</h1>
+
+    <div>
+      <a href="/start-deployment">Add Deployment</a>
+    </div>
+
+    <h2>Deployments</h2>
+    <ul>
+      <% deployments.forEach(item => { %>
+      <li>
+        <%= item.name %>
+        <!-- <a href="/deployment/<%= item.id %>"><%= item.name %></a> -->
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
