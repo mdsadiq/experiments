@@ -1,0 +1,17 @@
+{
+  "name": "locking",
+  "version": "1.0.0",
+  "description": "Systems with fixed inventory and contention",
+  "main": "approach1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0"
+  }
+}
